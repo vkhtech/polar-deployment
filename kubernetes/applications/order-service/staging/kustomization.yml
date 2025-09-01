@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/vkhtech/catalog-service/k8s?ref=main
+  - github.com/vkhtech/order-service/k8s?ref=main
 
 patchesStrategicMerge:
   - patch-env.yml
@@ -11,13 +11,13 @@ configMapGenerator:
   - behavior: merge
     files:
       - application-staging.yml
-    name: catalog-config
+    name: order-config
 
 images:
-  - name: catalog-service
-    newName: ghcr.io/vkhtech/catalog-service
+  - name: order-service
+    newName: ghcr.io/vkhtech/order-service
     newTag: latest
 
 replicas:
-  - name: catalog-service
-    count: 2
+  - name: order-service
+    count: 1
