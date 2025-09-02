@@ -18,8 +18,8 @@ configMapGenerator:
 images:
 - name: catalog-service
   newName: ghcr.io/vkhtech/catalog-service
-  newTag: 4217776d767f084ca96082d17090ca30f1e9c0f8
+  newTag: f92d05ff0acda525120860db8768ba8a654ea142
 
 replicas:
-  - name: catalog-service
-    count: 2
+- count: 2
+  name: catalog-service
