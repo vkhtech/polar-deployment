@@ -19,7 +19,7 @@ configMapGenerator:
 images:
 - name: edge-service
   newName: ghcr.io/vkhtech/edge-service
-  newTag: 23eb4f8dd9f717b3e14dce37929c24850a5e457f
+  newTag: d31a2e5b75611005e2cbb3c0b42a3ca8749134c1
 
 replicas:
 - count: 1
